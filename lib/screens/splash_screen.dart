@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:diet_planner/configuration/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../configuration/app_theme.dart';
 
@@ -16,12 +17,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     // to navigate to the home screen after 10 seconds
-    Timer(Duration(seconds: 10), () {
-      Navigator.pushReplacementNamed(context, AppRoutes.cart);
+    Timer(const Duration(seconds: 5), () {
+      Navigator.pushReplacementNamed(context, AppRoutes.login);
     });
     // to animate the logo
     timer = Timer.periodic(
-      Duration(seconds: 1),
+      const Duration(seconds: 1),//the time he wait to start change the width
       (timer) {
         if (width == 130) {
           setState(() {
@@ -58,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen> {
           child: AnimatedContainer(
             width: width,
             height: height,
-            duration: Duration(seconds: 1),
+            duration: const Duration(seconds:1),//the time of the amimation to go to new state
             child: Image.asset(
               "assets/images/app_logo.png",
             ),
@@ -71,7 +72,7 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Center(
             child: Text(
               "Richdiets 2023",
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
                 color: AppTheme.primaryColor,
@@ -80,7 +81,7 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
         ),
       ],
-    ));
+    ),);
   }
 
 

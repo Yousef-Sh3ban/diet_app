@@ -1,0 +1,21 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "folder-scopes.scopes": {
+        "work": {
+            "diet_app": {
+                "scopedFolderPath": "lib",
+                "excludedPaths": []
+            }
+        },
+        "work1": {}
+    },
+    "hide-files.files": [],
+    "autoHide.autoHideSideBar": false
+}

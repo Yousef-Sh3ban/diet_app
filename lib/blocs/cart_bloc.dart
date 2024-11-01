@@ -21,18 +21,25 @@ class CartBloc extends Bloc<AppEvent, AppState> {
   //======================================
   Future<List<MealModel>> _requestCartItems() {
     return Future.delayed(
-      Duration(seconds: 2),
+      const Duration(seconds: 2),
       () {
-        return List.generate(
-          10,
-          (index) => MealModel(
-            id: index,
-            name: 'Meal $index',
-            price: 10.0 * (index + 1),
-            image: 'assets/images/meal_placeholder.png',
-            description: 'This is a description for meal $index',
-          ),
-        );
+        return [
+          MealModel(id: 0, name: "Pizza Ransh extra cheese",  image: "assets/images/pizza0.png", price:1500),
+          MealModel(id: 1, name: "Chicken Cacciatore",  image: "assets/images/chiken1.png", price:1500),
+
+          ];
+        
+        
+        //  List.generate(
+        //   10,
+        //   (index) => MealModel(
+        //     id: index,
+        //     name: 'Meal $index',
+        //     price: 10.0 * (index + 1),
+        //     image: 'assets/images/meal_placeholder.png',
+        //     description: 'This is a description for meal $index',
+        //   ),
+        // );
       },
     );
   }
@@ -47,7 +54,9 @@ class CartBloc extends Bloc<AppEvent, AppState> {
   void _decreaseItemQuantity(int id) {
     for(var item in cartItemsList){
       if(item.id == id){
-        item.quantity--;
+        if(item.quantity > 1) {
+          item.quantity--;
+        }
         break;
       }
     }

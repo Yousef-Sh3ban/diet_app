@@ -13,3 +13,21 @@ class LoadedState extends AppState{
 }
 class EmptyState extends AppState{}
 class InitState extends AppState{}
+class DeliveryMethodState extends AppState{//edit
+  bool isDelivery;
+  bool isPickup;
+  DeliveryMethodState({required this.isDelivery,required this.isPickup});
+}
+//==========================================
+//==========================================
+class CheckboxState {
+  final bool isChecked;
+
+  CheckboxState({required this.isChecked});
+}
+//==========================================
+//=== =======================================
+class BranchState  {
+  String branch;
+  BranchState({required this.branch});
+}
