@@ -10,60 +10,66 @@ class SigninWaysWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Container(
-          width: 163,
-          height: 56,
-          decoration: const BoxDecoration(
-              color: Color(0xFFeceff5),
-              borderRadius: BorderRadius.all(Radius.circular(8))),
-          child: Row(
-            children: [
-              const SizedBox(
-                width: 30,
-              ),
-              SvgPicture.asset(
-                "assets/icons/facebook_icon.svg",
-                width: 24,
-                height: 24,
-              ),
-              Text(
-                "   Facebook",
-                style: GoogleFonts.poppins(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: const Color(0xFF3B5998)),
-              ),
-            ],
+        InkWell(
+          onTap: (){},
+          child: Container(
+            width: 163,
+            height: 56,
+            decoration: const BoxDecoration(
+                color: Color(0xFFeceff5),
+                borderRadius: BorderRadius.all(Radius.circular(8))),
+            child: Row(
+              children: [
+                const SizedBox(
+                  width: 30,
+                ),
+                SvgPicture.asset(
+                  "assets/icons/facebook_icon.svg",
+                  width: 24,
+                  height: 24,
+                ),
+                Text(
+                  "   Facebook",
+                  style: GoogleFonts.poppins(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF3B5998)),
+                ),
+              ],
+            ),
           ),
         ),
         const Expanded(child: SizedBox()),
-        Container(
-          width: 163,
-          height: 56,
-          decoration: const BoxDecoration(
-              color: Color(0xFFebf7ee),
-              borderRadius: BorderRadius.all(Radius.circular(8))),
-          child: Row(
-            children: [
-              const SizedBox(
-                width: 40,
-              ),
-              SvgPicture.asset(
-                "assets/icons/google_icon.svg",
-                width: 24,
-                height: 24,
-              ),
-              const SizedBox(
-                width: 8,
-              ),
-              Text(
-                "Google",
-                style: GoogleFonts.poppins(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: const Color(0xFF31AA52)),
-              )
-            ],
+        InkWell(
+          onTap: (){},
+          child: Container(
+            width: 163,
+            height: 56,
+            decoration: const BoxDecoration(
+                color: Color(0xFFebf7ee),
+                borderRadius: BorderRadius.all(Radius.circular(8))),
+            child: Row(
+              children: [
+                const SizedBox(
+                  width: 40,
+                ),
+                SvgPicture.asset(
+                  "assets/icons/google_icon.svg",
+                  width: 24,
+                  height: 24,
+                ),
+                const SizedBox(
+                  width: 8,
+                ),
+                Text(
+                  "Google",
+                  style: GoogleFonts.poppins(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF31AA52)),
+                )
+              ],
+            ),
           ),
         ),
       ],

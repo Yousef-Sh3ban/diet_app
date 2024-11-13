@@ -1,7 +1,7 @@
 import 'package:diet_planner/configuration/app_routes.dart';
 import 'package:diet_planner/configuration/app_theme.dart';
 import 'package:diet_planner/custom_widgets/app_banner.dart';
-import 'package:diet_planner/custom_widgets/cusom_text_field.dart';
+import 'package:diet_planner/custom_widgets/custom_text_field.dart';
 import 'package:diet_planner/custom_widgets/custom_button_widget.dart';
 import 'package:diet_planner/custom_widgets/signin_ways_widget.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +13,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-       onTap: () {
+      onTap: () {
         FocusScope.of(context).unfocus();
       },
       child: Scaffold(
@@ -21,7 +21,9 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const AppBanner(logoPath: "assets/images/app_logo_white_text_white.png",),
+              const AppBanner(
+                logoPath: "assets/images/app_logo_white_text_white.png",
+              ),
               Container(
                 color: Colors.white,
                 child: Padding(
@@ -73,9 +75,9 @@ class LoginScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 24),
-                      const CusomTextField(hint: "Email Address"),
+                      const CustomTextField(hint: "Email Address"),
                       const SizedBox(height: 16),
-                      const CusomTextField(hint: "Password"),
+                      const CustomTextField(hint: "Password"),
                       const SizedBox(
                         height: 8,
                       ),
@@ -98,9 +100,12 @@ class LoginScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 24),
-                      InkWell(onTap: (){
-                        Navigator.pushReplacementNamed(context, AppRoutes.mainScreens);
-                      }, child: const CustomButtonWidget(text: "Login")),
+                      InkWell(
+                          onTap: () {
+                            Navigator.pushReplacementNamed(
+                                context, AppRoutes.mainScreens);
+                          },
+                          child: const CustomButtonWidget(text: "Login")),
                       const SizedBox(
                         height: 24,
                       ),
@@ -127,6 +132,9 @@ class LoginScreen extends StatelessWidget {
                             ),
                           ),
                         ],
+                      ),
+                      const SizedBox(
+                        height: 40,
                       )
                     ],
                   ),

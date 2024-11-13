@@ -1,5 +1,5 @@
 import 'package:diet_planner/custom_widgets/app_banner.dart';
-import 'package:diet_planner/custom_widgets/cusom_text_field.dart';
+import 'package:diet_planner/custom_widgets/custom_text_field.dart';
 import 'package:diet_planner/custom_widgets/custom_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -45,7 +45,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                     const SizedBox(
                       height: 24,
                     ),
-                    const CusomTextField(
+                    const CustomTextField(
                       hint: "Email Address",
                     ),
                     const SizedBox(

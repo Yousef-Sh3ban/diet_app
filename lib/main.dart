@@ -2,11 +2,13 @@ import 'package:diet_planner/blocs/branch_bloc.dart';
 import 'package:diet_planner/blocs/cart_bloc.dart';
 import 'package:diet_planner/blocs/check_box_bloc.dart';
 import 'package:diet_planner/blocs/delivery_method_bloc.dart';
+import 'package:diet_planner/blocs/register_bloc.dart';
 import 'package:diet_planner/screens/main_screens.dart';
 import 'package:diet_planner/screens/forgot_password_screen.dart';
 import 'package:diet_planner/screens/login_screen.dart';
 import 'package:diet_planner/screens/register_screen.dart';
 import 'package:diet_planner/screens/splash_screen.dart';
+import 'package:diet_planner/screens/test_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'configuration/app_routes.dart';
@@ -29,21 +31,25 @@ class _MyAppState extends State<MyApp> {
       providers: [
         BlocProvider<BranchBloc>(create: (context) => BranchBloc()),
         BlocProvider<CheckBoxBloc>(create: (context) => CheckBoxBloc()),
+        BlocProvider<RegisterBloc>(create: (context) => RegisterBloc()),
         BlocProvider<DeliveryMethodBloc>(
             create: (context) => DeliveryMethodBloc()),
         BlocProvider<CartBloc>(create: (context) => CartBloc()),
+
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner:false,
         routes: {
           AppRoutes.mainScreens: (context) =>
               const MainScreens(), // No MultiBlocProvider here
-          //remove
+          //remove  
           AppRoutes.splash: (context) => const SplashScreen(),
+          AppRoutes.test: (context) => TestScreen(),
           AppRoutes.forgotPassword: (context) => const ForgotPasswordScreen(),
           AppRoutes.login: (context) => const LoginScreen(),
-          AppRoutes.register: (context) => const RegisterScreen(),
+          AppRoutes.register: (context) =>  RegisterScreen(),
         },
-        initialRoute: AppRoutes.splash,
+        initialRoute: AppRoutes.register,
         theme: ThemeData(
           useMaterial3: false,
           appBarTheme: const AppBarTheme(

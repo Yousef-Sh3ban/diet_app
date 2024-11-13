@@ -2,25 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CusomTextField extends StatefulWidget {
-  const CusomTextField({super.key, required this.hint, this.ispassword = false});
+class CustomTextField extends StatefulWidget {
+  const CustomTextField({super.key, required this.hint, this.ispassword = false});
   final String hint;
   final bool ispassword;
 
   @override
-  State<CusomTextField> createState() => _CusomTextFieldState();
+  State<CustomTextField> createState() => _CustomTextFieldState();
 }
 
-class _CusomTextFieldState extends State<CusomTextField> {
-  bool obscure = false;
+class _CustomTextFieldState extends State<CustomTextField> {
+  bool obscure = true;
 
-  TextEditingController fieldController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      obscureText: obscure,
-      controller: fieldController,
+      obscureText: obscure&&widget.ispassword,
       decoration: InputDecoration(
         suffixIcon: widget.ispassword
             ? MaterialButton(

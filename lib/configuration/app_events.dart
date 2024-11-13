@@ -1,3 +1,5 @@
+import 'package:diet_planner/models/register_model.dart';
+
 abstract class AppEvent{}
 class ClickEvent extends AppEvent{}
 class AddEvent extends AppEvent{
@@ -10,6 +12,10 @@ class RemoveEvent extends AppEvent{
 }
 class SearchEvent extends AppEvent{}
 class GetDataEvent extends AppEvent{} 
+class RegisterEvent extends AppEvent{
+  RegisterModel registerInfo;
+  RegisterEvent(this.registerInfo);
+}
 
 //==========================================
 //==========================================
