@@ -34,7 +34,7 @@ class ProfileScreen extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(50),
                     child: Image.network(
-                      "https://s3-alpha-sig.figma.com/img/1472/ba18/d5dd2901a091b157ead9e8a08d529a72?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cz88sc3tY7s2XS~EIf~YQ6FxOpa6oLvaciRvTeBksMIPNcdhAAN1JfzsNqgd4D3oT-UW0riyDNM7k42kDaJX2EqvCxxPS13nuQon1-1W3w~aLnx~W8J6TPH~O0e2bw2pOq8zdFmsd8U7hzwdZNVvQ~8JYpgNFTOkSxYALdvCTqXI1V0XOWgCzrrgzuYX6Yu1upNEbiZnfj1ii31Y7cH5-O8QtPvwGKIa0SZn7ScDDm-s0kRNs5msxt5lQAnyIbzRCSIa9k2m6g3aM-AcRb4NeBiyjFmfTrjMSua0nv40CVSZkLbaFvySQWITT4pc-6pCiKOs5wpY4IHyk9rSnEalZQ__",
+                      "https://progressive.org/downloads/16443/download/Screen%20Shot%202021-09-17%20at%209.44.46%20AM.png?cb=649ba713f137c50508ff1666abafd9f8",
                       height: 44,
                       width: 44,
                       fit: BoxFit.cover,
