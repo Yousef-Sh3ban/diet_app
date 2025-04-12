@@ -49,7 +49,7 @@ class _MyAppState extends State<MyApp> {
           AppRoutes.login: (context) => const LoginScreen(),
           AppRoutes.register: (context) =>  RegisterScreen(),
         },
-        initialRoute: AppRoutes.register,
+        initialRoute: AppRoutes.splash,
         theme: ThemeData(
           useMaterial3: false,
           appBarTheme: const AppBarTheme(
